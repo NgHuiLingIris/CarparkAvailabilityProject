@@ -1,4 +1,4 @@
-Carpark Availability Project
+#Carpark Availability Project#
 This project is a web application that helps users to find the nearest HDB carpark to their current location and check its availability. The application uses the government's open-source API to fetch carpark data and display it to the user.
 
 Technology Stack
