@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 3 Nearest Carparks</title>
+</head>
+<body>
+    <h1>Top 3 Nearest Carparks:</h1>
+    <ul>
+    {% for carpark in carparks %}
+        <li>{{ carpark['address'] }} - {{ carpark['distance'] }} km</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

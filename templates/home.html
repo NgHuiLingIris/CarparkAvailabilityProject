@@ -1,1 +1,30 @@
-<h1>Welcome to the HomePage!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Find Nearest Carparks</title>
+    <style>
+      #find-carparks-btn {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Find Nearest Carparks</h1>
+    <form action="/results" method="get">
+      <button id="find-carparks-btn" type="submit">Find nearest carparks</button>
+    </form>
+    
+    <script>
+      navigator.geolocation.getCurrentPosition(showPosition);
+      
+      function showPosition(position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        
+        // show button after geolocation is complete
+        document.getElementById("find-carparks-btn").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
