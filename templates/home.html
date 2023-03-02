@@ -16,6 +16,7 @@
       <input type="hidden" name="lng" id="lng-input">
       <button id="find-carparks-btn" type="submit">Find nearest carparks</button>
     </form>
+    <span id="waiting-loader">Please wait while we are getting your coordinates</span>
     
     <script>
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -26,6 +27,7 @@
         
         // show button after geolocation is complete
         document.getElementById("find-carparks-btn").style.display = "block";
+        document.getElementById("waiting-loader").style.display = "none";
         
         // set hidden input values
         document.getElementById("lat-input").value = lat;

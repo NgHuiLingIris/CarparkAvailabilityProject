@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Top 3 Nearest Carparks</title>
+    <title>Top 10 Nearest Carparks</title>
 </head>
 <body>
-    <h1>Top 3 Nearest Carparks:</h1>
+    <h1>Top 10 Nearest Carparks:</h1>
     <ul>
     {% for carpark in carparks %}
-        <li>{{ carpark['address'] }} - {{ carpark['distance'] }} km</li>
+        <li><b>{{ carpark['address'] }}</b> - {{ carpark['distance'] }} km away</li>
+        <ul>
+            <li>Carpark type: {{carpark['car_park_type']}}</li>
+            <li>Type of parking system: {{carpark['type_of_parking_system']}}</li>
+            <li>Short term parking: {{carpark['short_term_parking']}}</li>
+            <li>Free parking: {{carpark['free_parking']}}</li>
+            <li>Night parking: {{carpark['night_parking']}}</li>
+            <li>Carpark decks: {{carpark['car_park_decks']}}</li>
+            <li>Gantry height: {{carpark['gantry_height']}}</li>
+            <li>Carpark Basement: {{carpark['car_park_basement']}}</li>
+        </ul>
+    <br>
     {% endfor %}
     </ul>
 </body>
