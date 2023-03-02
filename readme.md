@@ -9,14 +9,14 @@ To use the application, simply enter your current location on the home page, and
 
 # Installation
 To install the application, follow these steps:
+Clone the repository
 
-# Clone the repository
 Install the dependencies using pip:
-Copy code
 `pip install -r requirements.txt`
+
 Start the application using Gunicorn:
-Copy code
 `gunicorn app:app`
+
 Open a web browser and navigate to http://localhost:8000 to access the application.
 
 # Contributions
