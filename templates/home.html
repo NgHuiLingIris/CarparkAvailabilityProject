@@ -12,6 +12,8 @@
   <body>
     <h1>Find Nearest Carparks</h1>
     <form action="/results" method="get">
+      <input type="hidden" name="lat" id="lat-input">
+      <input type="hidden" name="lng" id="lng-input">
       <button id="find-carparks-btn" type="submit">Find nearest carparks</button>
     </form>
     
@@ -24,6 +26,10 @@
         
         // show button after geolocation is complete
         document.getElementById("find-carparks-btn").style.display = "block";
+        
+        // set hidden input values
+        document.getElementById("lat-input").value = lat;
+        document.getElementById("lng-input").value = lng;
       }
     </script>
   </body>

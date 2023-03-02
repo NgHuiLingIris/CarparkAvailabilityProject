@@ -35,7 +35,7 @@ def calculate_distances(user_lat, user_lng, carpark_data):
         carpark['distance'] = distance
     return carpark_data
 
-def get_top_carparks(carpark_data, num_carparks=3):
+def get_top_carparks(carpark_data, num_carparks=10):
     # sort carpark list by distance
     sorted_carparks = sorted(carpark_data, key=lambda x: x['distance'])
 
